@@ -90,6 +90,70 @@ body {
     width: 100%;
 }
 
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle,
+.language-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.theme-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.theme-toggle:hover,
+.language-toggle:hover {
+    background: rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.language-toggle {
+    position: relative;
+    overflow: hidden;
+}
+
+.flag-de,
+.flag-en {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.flag-en {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(100%);
+    opacity: 0;
+}
+
+.language-toggle.english .flag-de {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.language-toggle.english .flag-en {
+    transform: translate(-50%, -50%) translateY(0);
+    opacity: 1;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -102,6 +166,128 @@ body {
     background-color: #fff;
     margin: 3px 0;
     transition: 0.3s;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.light-mode .navbar {
+    background: rgba(248, 249, 250, 0.95);
+}
+
+.light-mode .nav-logo,
+.light-mode .nav-link {
+    color: #333;
+}
+
+.light-mode .nav-link:hover {
+    color: #667eea;
+}
+
+.light-mode .theme-toggle,
+.light-mode .language-toggle {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.light-mode .bar {
+    background-color: #333;
+}
+
+.light-mode .hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.light-mode .hero-title,
+.light-mode .section-title {
+    color: #333;
+}
+
+.light-mode .hero-subtitle,
+.light-mode .section-subtitle {
+    color: #666;
+}
+
+.light-mode .services {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.light-mode .about {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.light-mode .portfolio {
+    background: linear-gradient(135deg, #dee2e6 0%, #e9ecef 100%);
+}
+
+.light-mode .contact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.light-mode .footer {
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .service-card,
+.light-mode .portfolio-item,
+.light-mode .profile-card,
+.light-mode .contact-form {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .service-card:hover,
+.light-mode .portfolio-item:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .service-card h3,
+.light-mode .portfolio-content h3,
+.light-mode .profile-info h3,
+.light-mode .footer-logo,
+.light-mode .footer-column h4 {
+    color: #333;
+}
+
+.light-mode .service-card p,
+.light-mode .service-features li,
+.light-mode .portfolio-content p,
+.light-mode .about-description,
+.light-mode .stat-label,
+.light-mode .contact-description,
+.light-mode .contact-item p,
+.light-mode .footer-brand p,
+.light-mode .footer-column a {
+    color: #666;
+}
+
+.light-mode .card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.light-mode .form-group input,
+.light-mode .form-group select,
+.light-mode .form-group textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.light-mode .form-group input::placeholder,
+.light-mode .form-group textarea::placeholder {
+    color: #999;
+}
+
+.light-mode .theme-toggle i {
+    color: #333;
 }
 
 /* Hero Section */
@@ -797,6 +983,10 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -810,12 +1000,21 @@ section {
         backdrop-filter: blur(10px);
     }
 
+    .light-mode .nav-menu {
+        background: rgba(248, 249, 250, 0.95);
+    }
+
     .nav-menu.active {
         left: 0;
     }
 
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-controls {
+        order: -1;
+        margin-right: auto;
     }
 
     .hero-content {

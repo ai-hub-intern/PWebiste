@@ -9,6 +9,136 @@ if (mobileMenu) {
     });
 }
 
+// Theme Toggle (Dark/Light Mode)
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Check for saved theme preference or default to dark mode
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'light') {
+    body.classList.add('light-mode');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    
+    if (body.classList.contains('light-mode')) {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
+// Language Toggle (German/English)
+const languageToggle = document.getElementById('languageToggle');
+let currentLanguage = localStorage.getItem('language') || 'de';
+
+// Language translations
+const translations = {
+    de: {
+        // Navigation
+        'Home': 'Home',
+        'Services': 'Services',
+        'About': 'Über mich',
+        'Portfolio': 'Portfolio',
+        'Contact': 'Kontakt',
+        
+        // Hero Section
+        'Transform Your Business with': 'Transformieren Sie Ihr Unternehmen mit',
+        'Artificial Intelligence': 'Künstlicher Intelligenz',
+        'As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.': 'Als erfahrener AI-Consultant helfe ich Ihnen dabei, konkrete KI-Lösungen zu finden und erfolgreich zu implementieren. Von der Strategie bis zur Umsetzung - Ihr Partner für die digitale Transformation.',
+        'Book Consultation': 'Beratung buchen',
+        'Discover Services': 'Services entdecken',
+        
+        // Services
+        'My Services': 'Meine Services',
+        'Comprehensive AI consulting for your success': 'Umfassende AI-Beratung für Ihren Erfolg',
+        
+        // About
+        'About Me': 'Über mich',
+        'Your experienced partner for AI transformation': 'Ihr erfahrener Partner für KI-Transformation',
+        
+        // Portfolio
+        'Successful Projects': 'Erfolgreiche Projekte',
+        'Insights into my work and success stories': 'Einblicke in meine Arbeit und Erfolgsgeschichten',
+        
+        // Contact
+        'Contact': 'Kontakt',
+        'Let\'s talk about your AI project': 'Lassen Sie uns über Ihr KI-Projekt sprechen',
+        
+        // Footer
+        'Your partner for successful AI transformation': 'Ihr Partner für erfolgreiche KI-Transformation'
+    },
+    en: {
+        // Navigation
+        'Home': 'Home',
+        'Services': 'Services',
+        'About': 'About',
+        'Portfolio': 'Portfolio',
+        'Contact': 'Contact',
+        
+        // Hero Section
+        'Transform Your Business with': 'Transform Your Business with',
+        'Artificial Intelligence': 'Artificial Intelligence',
+        'As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.': 'As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.',
+        'Book Consultation': 'Book Consultation',
+        'Discover Services': 'Discover Services',
+        
+        // Services
+        'My Services': 'My Services',
+        'Comprehensive AI consulting for your success': 'Comprehensive AI consulting for your success',
+        
+        // About
+        'About Me': 'About Me',
+        'Your experienced partner for AI transformation': 'Your experienced partner for AI transformation',
+        
+        // Portfolio
+        'Successful Projects': 'Successful Projects',
+        'Insights into my work and success stories': 'Insights into my work and success stories',
+        
+        // Contact
+        'Contact': 'Contact',
+        'Let\'s talk about your AI project': 'Let\'s talk about your AI project',
+        
+        // Footer
+        'Your partner for successful AI transformation': 'Your partner for successful AI transformation'
+    }
+};
+
+// Apply saved language
+if (currentLanguage === 'en') {
+    languageToggle.classList.add('english');
+    applyLanguage('en');
+}
+
+languageToggle.addEventListener('click', () => {
+    languageToggle.classList.toggle('english');
+    
+    if (languageToggle.classList.contains('english')) {
+        currentLanguage = 'en';
+        applyLanguage('en');
+    } else {
+        currentLanguage = 'de';
+        applyLanguage('de');
+    }
+    
+    localStorage.setItem('language', currentLanguage);
+});
+
+function applyLanguage(lang) {
+    // Apply translations to elements with data attributes
+    document.querySelectorAll('[data-de][data-en]').forEach(element => {
+        if (lang === 'en') {
+            element.textContent = element.getAttribute('data-en');
+        } else {
+            element.textContent = element.getAttribute('data-de');
+        }
+    });
+}
+
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

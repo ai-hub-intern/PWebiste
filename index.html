@@ -19,12 +19,21 @@
                 <span>AI Consultant</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#about" class="nav-link">Über mich</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li><a href="#home" class="nav-link" data-de="Home" data-en="Home">Home</a></li>
+                <li><a href="#services" class="nav-link" data-de="Services" data-en="Services">Services</a></li>
+                <li><a href="#about" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
+                <li><a href="#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="language-toggle" id="languageToggle" aria-label="Toggle Language">
+                    <span class="flag-de">🇩🇪</span>
+                    <span class="flag-en">🇺🇸</span>
+                </button>
+            </div>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -39,21 +48,21 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        Transformieren Sie Ihr Unternehmen mit 
-                        <span class="gradient-text">Künstlicher Intelligenz</span>
+                        <span data-de="Transformieren Sie Ihr Unternehmen mit" data-en="Transform Your Business with">Transformieren Sie Ihr Unternehmen mit</span>
+                        <span class="gradient-text" data-de="Künstlicher Intelligenz" data-en="Artificial Intelligence">Künstlicher Intelligenz</span>
                     </h1>
-                    <p class="hero-subtitle">
+                    <p class="hero-subtitle" data-de="Als erfahrener AI-Consultant helfe ich Ihnen dabei, konkrete KI-Lösungen zu finden und erfolgreich zu implementieren. Von der Strategie bis zur Umsetzung - Ihr Partner für die digitale Transformation." data-en="As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.">
                         Als erfahrener AI-Consultant helfe ich Ihnen dabei, konkrete KI-Lösungen zu finden und erfolgreich zu implementieren. 
                         Von der Strategie bis zur Umsetzung - Ihr Partner für die digitale Transformation.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">
                             <i class="fas fa-calendar-alt"></i>
-                            Beratung buchen
+                            <span data-de="Beratung buchen" data-en="Book Consultation">Beratung buchen</span>
                         </a>
                         <a href="#services" class="btn btn-secondary">
                             <i class="fas fa-arrow-right"></i>
-                            Services entdecken
+                            <span data-de="Services entdecken" data-en="Discover Services">Services entdecken</span>
                         </a>
                     </div>
                 </div>
@@ -90,8 +99,8 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Meine Services</h2>
-                <p class="section-subtitle">Umfassende AI-Beratung für Ihren Erfolg</p>
+                <h2 class="section-title" data-de="Meine Services" data-en="My Services">Meine Services</h2>
+                <p class="section-subtitle" data-de="Umfassende AI-Beratung für Ihren Erfolg" data-en="Comprehensive AI consulting for your success">Umfassende AI-Beratung für Ihren Erfolg</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -176,8 +185,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <div class="section-header">
-                        <h2 class="section-title">Über mich</h2>
-                        <p class="section-subtitle">Ihr erfahrener Partner für KI-Transformation</p>
+                        <h2 class="section-title" data-de="Über mich" data-en="About Me">Über mich</h2>
+                        <p class="section-subtitle" data-de="Ihr erfahrener Partner für KI-Transformation" data-en="Your experienced partner for AI transformation">Ihr erfahrener Partner für KI-Transformation</p>
                     </div>
                     <p class="about-description">
                         Mit über 8 Jahren Erfahrung in der KI-Branche habe ich bereits mehr als 50 Unternehmen 
@@ -243,8 +252,8 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Erfolgreiche Projekte</h2>
-                <p class="section-subtitle">Einblicke in meine Arbeit und Erfolgsgeschichten</p>
+                <h2 class="section-title" data-de="Erfolgreiche Projekte" data-en="Successful Projects">Erfolgreiche Projekte</h2>
+                <p class="section-subtitle" data-de="Einblicke in meine Arbeit und Erfolgsgeschichten" data-en="Insights into my work and success stories">Einblicke in meine Arbeit und Erfolgsgeschichten</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -341,8 +350,8 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="section-header">
-                        <h2 class="section-title">Kontakt</h2>
-                        <p class="section-subtitle">Lassen Sie uns über Ihr KI-Projekt sprechen</p>
+                        <h2 class="section-title" data-de="Kontakt" data-en="Contact">Kontakt</h2>
+                        <p class="section-subtitle" data-de="Lassen Sie uns über Ihr KI-Projekt sprechen" data-en="Let's talk about your AI project">Lassen Sie uns über Ihr KI-Projekt sprechen</p>
                     </div>
                     <p class="contact-description">
                         Bereit für den nächsten Schritt? Kontaktieren Sie mich für ein unverbindliches Beratungsgespräch. 
@@ -423,7 +432,7 @@
                         <i class="fas fa-brain"></i>
                         <span>AI Consultant</span>
                     </div>
-                    <p>Ihr Partner für erfolgreiche KI-Transformation</p>
+                    <p data-de="Ihr Partner für erfolgreiche KI-Transformation" data-en="Your partner for successful AI transformation">Ihr Partner für erfolgreiche KI-Transformation</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
