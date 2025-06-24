@@ -44,6 +44,7 @@ const translations = {
         'Services': 'Services',
         'About': 'Über mich',
         'Portfolio': 'Portfolio',
+        'Sommeraktion': 'Sommeraktion',
         'Contact': 'Kontakt',
         
         // Hero Section
@@ -52,6 +53,8 @@ const translations = {
         'As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.': 'Als erfahrener AI-Consultant helfe ich Ihnen dabei, konkrete KI-Lösungen zu finden und erfolgreich zu implementieren. Von der Strategie bis zur Umsetzung - Ihr Partner für die digitale Transformation.',
         'Book Consultation': 'Beratung buchen',
         'Discover Services': 'Services entdecken',
+        'Summer Special: 20% off consulting projects until August 31st.': 'Sommeraktion: 20% Rabatt auf Beratungsprojekte bis 31. August!',
+        'Get in touch': 'Jetzt anfragen',
         
         // Services
         'My Services': 'Meine Services',
@@ -78,6 +81,7 @@ const translations = {
         'Services': 'Services',
         'About': 'About',
         'Portfolio': 'Portfolio',
+        'Sommeraktion': 'Summer Deal',
         'Contact': 'Contact',
         
         // Hero Section
@@ -86,6 +90,8 @@ const translations = {
         'As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.': 'As an experienced AI consultant, I help you find concrete AI solutions and implement them successfully. From strategy to implementation - your partner for digital transformation.',
         'Book Consultation': 'Book Consultation',
         'Discover Services': 'Discover Services',
+        'Summer Special: 20% off consulting projects until August 31st.': 'Summer Special: 20% off consulting projects until August 31st.',
+        'Get in touch': 'Get in touch',
         
         // Services
         'My Services': 'My Services',
